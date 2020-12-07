@@ -5,14 +5,19 @@ $primary_color: #008ed6;
 $icon_font_size: 30px;
 
 // DEFAULT
-*, ::before, ::after {
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
   background: $body_bg;
   color: $font_color;
+  width: 100%;
 }
+
 
 // HEADER START
 .navbar {
@@ -21,6 +26,29 @@ body {
 }
 .nav-link {
   text-transform: uppercase;
+}
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+.navbar-nav a{
+  transition: .8s;
+  -webkit-transition: .8s;
+  -moz-transition: .8s;
+  -ms-transition: .8s;
+  -o-transition: .8s;
+}
+.navbar-nav a:hover {
+  transition: all .8s;
+  transform: translateX(5%);
+  -webkit-transform: translateX(5%);
+  -moz-transform: translateX(5%);
+  -ms-transform: translateX(5%);
+  -o-transform: translateX(5%);
+  -webkit-transition: all .8s;
+  -moz-transition: all .8s;
+  -ms-transition: all .8s;
+  -o-transition: all .8s;
 }
 // HEADER END
 
@@ -34,7 +62,7 @@ body {
     background: rgba(0, 0, 0, 0.7);
     min-height: 700px;
   }
-  .home_inner{
+  .home_inner {
     padding-top: 150px;
     padding-bottom: 150px;
   }
@@ -49,24 +77,59 @@ body {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
   }
-  .card_form{
+  .card_form {
     opacity: 0.85;
   }
 }
 // HOME SEC END
 
 // EXPLORE SEC START
-#explore{
- .fa{
-  background: $body_bg;
-  color: $font_color;
-  padding: 4px;
-  font-size: $icon_font_size;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
- }
+#explore {
+  .fa {
+    background: $body_bg;
+    color: $font_color;
+    padding: 4px;
+    font-size: $icon_font_size;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  .explore_main img {
+    border: 0.009px solid #ddd;
+  }
 }
 // EXPLORE SEC END
+
+// CREATE SEC START
+#create {
+  .fa {
+    background: $font_color;
+    color: $primary_color;
+    padding: 4px;
+    font-size: $icon_font_size;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+}
+// CREATE SEC END
+
+// SHARE SEC START
+#share {
+  .fa {
+    background: $body_bg;
+    color: $font_color;
+    padding: 4px;
+    font-size: $icon_font_size;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+}
+// SHARE SEC END
